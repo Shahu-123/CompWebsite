@@ -2,19 +2,74 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>GitHub</title>
+    <title>CompSciProject</title>
 </head>
 <style>
-   h1{
-       background:rgb(230, 230, 230);
-    }
     body{
-       background:blue;
+        background: #EEE2DC;
+    }
+    h1 {
+        font-family: arial;
+        text-decoration:underline;
+        background:#EDC7B7;
+        border: groove #123C69 5px;
+    }
+    #intro{
+        background: #BAB2B5;
+        line-height:1.3em;
+        font-size:16px;
+        font-family: verdana;
+        margin-top:26px;
+        border:dotted #AC3B61 3px;
+        border-radius:22px;
+        padding:8px;
+    }
+    #contents{
+        font-family:monospace;
+        font-size: 2.3em;
+        text-align: center;
+        line-height:75px;
+    }
+    a:hover{
+        background:rgb(230, 212, 230);
+    }
+    #why-neumann{
+        font-family:monospace;
+        line-height:37px;
+        font-size:18px;
+        text-align:center;
+    
+    }
+    ol li a{
+        text-decoration:none;
+        color: inherit;
+    }
+    #von{
+        position:relative;
+        left:14em;
+        margin-top:9px;
+        margin-bottom:9px;
+        border:double;
+    }
 </style>
+<!--colors: #EDC7B7, #EEE2DC, #BAB2B5, #123C69, #AC3B61-->
 <body>
-    <h1>The Von Neumann Architecture</h1>
-hello
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg">
+<h1 style = "text-align: center">The Von Neumann Concept:<br><em> Made Easy</em></h1>
+<div id = "contents">Contents</div>
+
+<div id = "why-neumann"><ol>
+        <li><a href = "#intro">Why Von Neumann?</a></li>
+        <li><a href = "#intro"> How it Works?</a></li>
+        <li>Test Yourself!</li>
+        </ol>
+</div>
+<div id = "intro">The <strong>Von Neumann architecture</strong> was first published by <a href ="https://en.wikipedia.org/wiki/John_von_Neumann">John Von Neumann</a> in 1945.<br>
+<img id = "von" src = "https://upload.wikimedia.org/wikipedia/commons/5/5e/JohnvonNeumann-LosAlamos.gif"alt ="A picture of Von Neumann" width = "100px"><br>
+
+His computer architecture design consists of a Control Unit, Arithmetic and Logic Unit (ALU), Memory Unit, Registers and Inputs/Outputs.<br><br>
+
+Von Neumann architecture is based on the stored-program computer concept, where instruction data and program data are stored in the same memory.  This design is still used in most computers produced today.</div>
 </body>
 
 </html>
+
