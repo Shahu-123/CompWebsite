@@ -7,7 +7,7 @@
 <style>
     body{
         background-image: linear-gradient(to right,rgb(35, 100, 130), #EEE2DC, rgb(35, 100, 130));
-        text-align:center
+        text-align:center;
         margin:auto;
         width:75%;
         border: double 10px black;
@@ -94,11 +94,20 @@
     float:right;
   }
   #fetch-cycle li{
-    margin-top:5em;
+    text-align:left;
+    margin-top:2em;
     font-size:1.5em;
-    font-family:arial;
+    font-family: arial;
     line-height:2em;
     text-decoration:underline;
+  }
+  #fetch-cycle{
+    margin-top:5em;
+  }
+  .fetch-cycle-info{
+    font-family: arial;
+    font-size: 1.3em;
+    text-align:left;
   }
 </style>
 <!--colors: #EDC7B7, #EEE2DC, #BAB2B5, #123C69, #AC3B61-->
@@ -127,10 +136,14 @@ The Von Neumann architecture is based on the stored-program computer concept, wh
   <img id ="fetch"src = "https://www.bitsofbytes.co/uploads/2/5/5/3/25530678/fde_orig.png" alt = "Fetch-Decode-Execute">
   <ol id ="fetch-cycle">
     <li><strong>Fetch</strong></li>
-    <p></p>
+    <p class ="fetch-cycle-info"> Instructions and data are fetched from the computer memory.</p>
     <li><strong>Decode</strong></li>
+    <p class ="fetch-cycle-info">The data and instructions will then be translated to instructions understandable by the CPU</p>
     <li><strong>Execute</strong></li>
+    <p class = "fetch-cycle-info">The CPU will then execute the instructions in a logical sequence.<br>
+    Once complete, the process will start again for the next program</p>
   </ol>
+  <h3 class ="sub-sub-headers">Inside the CPU</h3>
   </body>
 </html>
 
