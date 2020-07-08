@@ -109,6 +109,41 @@
     font-size: 1.3em;
     text-align:left;
   }
+  .button{
+  font-family:arial;
+    font-size:1.1em;
+  border: solid 1.5px black;
+  width:150px;
+    padding:2em 1em;
+  height:100px;
+  color: white;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: 0.3s;
+    cursor:pointer;
+    margin:auto;
+    align-content:center;
+}
+  #control{
+    background:#AC3B61;
+  }
+  #ALU{
+    background:#123C69;
+  }
+  #PC{
+    background:#BAB2B5;
+  }
+  #GPR{
+    line-height:1.4em;
+    background:#EDC7B7;
+  }
+  .button:hover {
+    opacity: 1
+  }
+  #button-s{
+    display:flex;
+    margin:auto;
+  }
 </style>
 <!--colors: #EDC7B7, #EEE2DC, #BAB2B5, #123C69, #AC3B61-->
 <body>
@@ -144,6 +179,12 @@ The Von Neumann architecture is based on the stored-program computer concept, wh
     Once complete, the process will start again for the next program</p>
   </ol>
   <h3 class ="sub-sub-headers">Inside the CPU</h3>
-  </body>
+  <div id ="button-s">
+  <a class ="button" id ="control">Control Unit</a>
+  <a class ="button" id ="ALU">ALU<br><br>Arithmetic & Logic Unit</a>
+  <a class ="button" id ="PC" >PC<br><br>Program Counter</a>
+  <a href = "#intro" class ="button" id ="GPR" >General Purpose Register</a>
+  </div>
+    </body>
 </html>
 
