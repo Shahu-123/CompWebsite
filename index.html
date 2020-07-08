@@ -7,11 +7,12 @@
 <style>
     body{
         background: #EEE2DC;
-        text-align:center
-        margin: auto
-        width: 75%;
+        text-align:center;
+        margin:auto;
+        width:75%;
         border: double 7px black;
         padding: 100px;
+      
     }
     h1 {
         font-family: arial;
@@ -20,14 +21,15 @@
         border: groove #123C69 5px;
     }
     #intro{
-        background: #BAB2B5;
+        background: #123C69;
         line-height:1.3em;
-        font-size:16px;
+        font-size:1.15em;
         font-family: verdana;
-        margin-top:26px;
+        margin-top:10px;
         border:dotted #AC3B61 3px;
         border-radius:22px;
         padding:8px;
+        color:rgb(220, 220, 220);
     }
     #contents{
         font-family:monospace;
@@ -36,11 +38,11 @@
         line-height:75px;
     }
     a:hover{
-        background:rgb(230, 212, 230);
+        background:transparent;
     }
     #why-neumann{
         font-family:monospace;
-        line-height:37px;
+        line-height:50px;
         font-size:18px;
         text-align:center;
     
@@ -51,17 +53,33 @@
     }
     #von{
         display:block;
-        left:14em;
-        margin-top:9px;
-        margin-bottom:9px;
-        margin-right:auto;
-        margin-left:auto;
+        margin-top:30px;
+        margin-bottom:30px;
+      margin-left:auto;
+      margin-right:auto;
         border:double;
     }
+  .dividers{
+    object-fit:none;
+    width:100%;
+    height:100px;
+  }
+  #john{
+    color:yellow;
+  }
+  .sub-headers{
+    text-align:center;
+    font-family:fantasy;
+    font-size:1.8em;
+    text-decoration:underline;
+    margin-top:2em;
+    margin-bottom:2em;
+  }
 </style>
 <!--colors: #EDC7B7, #EEE2DC, #BAB2B5, #123C69, #AC3B61-->
 <body>
 <h1 style = "text-align: center">The Von Neumann Concept:<br><em> Made Easy</em></h1>
+  <img class = "dividers" src = "https://pluspng.com/img-png/png-divider-lines-tiny-edge-line-decorative-divider-png-512.png">
 <div id = "contents">Contents</div>
 
 <div id = "why-neumann"><ol>
@@ -70,13 +88,14 @@
         <li>Test Yourself!</li>
         </ol>
 </div>
-<div id = "intro">The <strong>Von Neumann architecture</strong> was first published by <a href ="https://en.wikipedia.org/wiki/John_von_Neumann">John Von Neumann</a> in 1945.<br>
-<img id = "von" src = "https://upload.wikimedia.org/wikipedia/commons/5/5e/JohnvonNeumann-LosAlamos.gif"alt ="A picture of Von Neumann" width = "100px"><br>
+  <img class = "dividers" src = "https://pluspng.com/img-png/png-divider-lines-tiny-edge-line-decorative-divider-png-512.png">
+  <h2 class = "sub-headers">Why Von Neumann?</h2>
+<div id = "intro">The <strong>Von Neumann architecture</strong> was first published by <a  id ="john" href ="https://en.wikipedia.org/wiki/John_von_Neumann" target = "_blank">John Von Neumann</a> in 1945.<br>
+<img id = "von" src = "https://upload.wikimedia.org/wikipedia/commons/5/5e/JohnvonNeumann-LosAlamos.gif"alt ="A picture of Von Neumann" width = "20%"><br>
 
-His computer architecture design consists of a Control Unit, Arithmetic and Logic Unit (ALU), Memory Unit, Registers and Inputs/Outputs.<br><br>
+Before 1945, a series of switches had to be manually turned, or read from a paper stream to run programs.<br><br>
 
 Von Neumann architecture is based on the stored-program computer concept, where instruction data and program data are stored in the same memory.  This design is still used in most computers produced today.</div>
 </body>
-
 </html>
 
