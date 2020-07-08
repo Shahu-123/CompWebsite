@@ -6,19 +6,20 @@
 </head>
 <style>
     body{
-        background: #EEE2DC;
-        text-align:center;
+        background-image: linear-gradient(to right,rgb(35, 100, 130), #EEE2DC, rgb(35, 100, 130));
+        text-align:center
         margin:auto;
         width:75%;
-        border: double 7px black;
+        border: double 10px black;
         padding: 100px;
       
     }
     h1 {
         font-family: arial;
         text-decoration:underline;
-        background:#EDC7B7;
+        background:radial-gradient(#EDC7B7, #BAB2B5);
         border: groove #123C69 5px;
+        padding:15px;
     }
     #intro{
         background: #123C69;
@@ -26,9 +27,10 @@
         font-size:1.15em;
         font-family: verdana;
         margin-top:10px;
+        margin-bottom:50px;
         border:dotted #AC3B61 3px;
         border-radius:22px;
-        padding:8px;
+        padding:14px;
         color:rgb(220, 220, 220);
     }
     #contents{
@@ -45,6 +47,7 @@
         line-height:50px;
         font-size:18px;
         text-align:center;
+        text-decoration:underline;
     
     }
     ol li a{
@@ -75,27 +78,59 @@
     margin-top:2em;
     margin-bottom:2em;
   }
+  .sub-sub-headers{
+    background:#EDC7B7;
+    text-align:center;
+    font-family: sans-serif;
+    font-size:1.2em;
+    margin-top:2em;
+    margin-bottom:2em;
+    border:solid 2px black;
+    padding:14px;
+    border-radius:25px 0px;
+  }
+  #fetch{
+    position:relative;
+    float:right;
+  }
+  #fetch-cycle li{
+    margin-top:5em;
+    font-size:1.5em;
+    font-family:arial;
+    line-height:2em;
+    text-decoration:underline;
+  }
 </style>
 <!--colors: #EDC7B7, #EEE2DC, #BAB2B5, #123C69, #AC3B61-->
 <body>
 <h1 style = "text-align: center">The Von Neumann Concept:<br><em> Made Easy</em></h1>
-  <img class = "dividers" src = "https://pluspng.com/img-png/png-divider-lines-tiny-edge-line-decorative-divider-png-512.png">
+  <img class = "dividers" src = "https://pluspng.com/img-png/png-divider-lines-tiny-edge-line-decorative-divider-png-512.png" alt ="divider">
 <div id = "contents">Contents</div>
 
 <div id = "why-neumann"><ol>
-        <li><a href = "#intro">Why Von Neumann?</a></li>
-        <li><a href = "#intro"> How it Works?</a></li>
+        <li><a href = "#why-von-neumann">Why Von Neumann?</a></li>
+        <li><a href = "#how-it-works">How it Works</a></li>
         <li>Test Yourself!</li>
         </ol>
 </div>
-  <img class = "dividers" src = "https://pluspng.com/img-png/png-divider-lines-tiny-edge-line-decorative-divider-png-512.png">
-  <h2 class = "sub-headers">Why Von Neumann?</h2>
-<div id = "intro">The <strong>Von Neumann architecture</strong> was first published by <a  id ="john" href ="https://en.wikipedia.org/wiki/John_von_Neumann" target = "_blank">John Von Neumann</a> in 1945.<br>
+  <img class = "dividers" src = "https://pluspng.com/img-png/png-divider-lines-tiny-edge-line-decorative-divider-png-512.png" alt ="divider">
+  <h2 class = "sub-headers" id = "why-von-neumann">Why Von Neumann?</h2>
+<div id = "intro">The <strong>Von Neumann architecture</strong> is a computer architecture that was first published by <a  id ="john" href ="https://en.wikipedia.org/wiki/John_von_Neumann" target = "_blank">John Von Neumann</a> in 1945.<br>
 <img id = "von" src = "https://upload.wikimedia.org/wikipedia/commons/5/5e/JohnvonNeumann-LosAlamos.gif"alt ="A picture of Von Neumann" width = "20%"><br>
 
 Before 1945, a series of switches had to be manually turned, or read from a paper stream to run programs.<br><br>
 
-Von Neumann architecture is based on the stored-program computer concept, where instruction data and program data are stored in the same memory.  This design is still used in most computers produced today.</div>
-</body>
+The Von Neumann architecture is based on the stored-program computer concept, where instruction data and program data are stored in the same memory.  This design is still used in most computers produced today.</div>
+<img class = "dividers" src = "https://pluspng.com/img-png/png-divider-lines-tiny-edge-line-decorative-divider-png-512.png" alt ="divider">
+  <h2 class ="sub-headers" id="how-it-works">How it Works</h2>
+  <h3 class ="sub-sub-headers">The Fetch-Decode-Execute Cycle</h3>
+  <img id ="fetch"src = "https://www.bitsofbytes.co/uploads/2/5/5/3/25530678/fde_orig.png" alt = "Fetch-Decode-Execute">
+  <ol id ="fetch-cycle">
+    <li><strong>Fetch</strong></li>
+    <p></p>
+    <li><strong>Decode</strong></li>
+    <li><strong>Execute</strong></li>
+  </ol>
+  </body>
 </html>
 
