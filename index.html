@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <title>CompSciProject</title>
 </head>
-<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js">
-</script>
 <style>
-    html{
-        scroll-behaviour:smooth;
-    }
     body{
         background-image: linear-gradient(to right,rgb(35, 100, 130), #EEE2DC, rgb(35, 100, 130));
         text-align:center;
@@ -27,6 +22,7 @@
         padding:15px;
     }
     #intro, .CPU-exp{
+      text-align:left;
         background: #123C69;
         line-height:1.3em;
         font-size:1.15em;
@@ -153,7 +149,7 @@
   .CPU-exp{
    border:dotted #EEE2DC 3px;
     width:65%;
-    text-align:center;
+    text-align:left;
     margin:auto;
     margin-top:3em;
     margin-bottom:3em;
@@ -164,8 +160,10 @@
     border:dotted #EDC7B7 3px;
   }
   #A-L-U ol{
+    position:relative;
+    right:1.075em;
     text-align:center;
-    margin: 0 auto;
+    margin: auto;
     list-style:none;
   }
   #A-L-U a{
@@ -179,6 +177,54 @@
     background:rgb(200, 175, 150);
     color:white;
   }
+  .CPU-exp h4{
+    text-align:center;
+  }
+  #registers{
+    text-align:left;
+    font-size:1.3em;
+    font-family:arial;
+  }
+  #registers h4{
+    text-decoration:underline;
+  }
+  #processor{
+    position:relative;
+    margin-left:7em;
+    float:right;
+    margin-top:6em;
+    width:30em;
+    border-radius:3em;
+    box-shadow: 0 0 5px 5px #141414;
+  }
+  #Q1{
+    width:200px;
+    height:200px;
+    border-radius:2em;
+    background:radial-gradient(#AC3B61, #123C69);
+    align-content:center;
+    cursor:pointer;
+    margin:auto;
+    overflow:auto;
+    margin-bottom:5em;
+  }
+  #Q1:active{
+    background:radial-gradient(#123C69, #AC3B61);
+  }
+  #qwe{
+    font-size:1.5em;
+    font-family:monospace;
+    margin-bottom:5em;
+  }
+  #Q{
+    display:flex;
+    margin:auto;
+  }
+  #r{
+    font-family:cursive;
+    font-size:1.5em;
+    margin-top:2em;
+  }
 </style>
 <!--colors: #EDC7B7, #EEE2DC, #BAB2B5, #123C69, #AC3B61-->
 <body>
@@ -189,7 +235,8 @@
 <div id = "why-neumann"><ul style="list-style:none;">
         <li><a href = "#why-von-neumann">What is The Von Neumann Architecture?</a></li>
         <li><a href = "#how-it-works">How it Works</a></li>
-        <li>Test Yourself!</li>
+  <li><a href = "#program-exe-flow"> Program Execution Flow</a></li>
+  <li><a href="#test-self">Test Yourself!</a></li>
         </ul>
 </div>
   <img class = "dividers" src = "https://pluspng.com/img-png/png-divider-lines-tiny-edge-line-decorative-divider-png-512.png" alt ="divider">
@@ -249,7 +296,48 @@ The Von Neumann architecture is based on the stored-program computer concept, wh
       If the ALU needs to temporarily store data as part of its calculations, the GPR is where it is stored.
     </p>
   </div>
-
-    </body>
+  <h3 class = "sub-sub-headers">Other Registers Used</h3>
+  <img id ="processor" src = "https://cdn.instructables.com/FG6/NSYJ/IM5WPGD9/FG6NSYJIM5WPGD9.LARGE.jpg?auto=webp&frame=1&fit=bounds">
+  <div id ="registers"><h4 style="margin-top:5em">MAR (Memory Address Register)</h4>
+  <p>Contains the address of the current instruction to be fetched.</p>
+  <h4>MDR (Memory Data Register)</h4>
+  <p> Contains the instruction / data after it is fetched from memory.</p>
+  <h4>PC (Program Counter)</h4>
+  <p>Contains the address of the next instruction to be fetched.</p>
+  <h4>CIR (Current Instruction Register)</h4>
+  <p>Contains the instruction / data to be decoded.</p>
+  </div>
+  <img class = "dividers" src = "https://pluspng.com/img-png/png-divider-lines-tiny-edge-line-decorative-divider-png-512.png" alt ="divider">
+  <h2 class = "sub-headers" id = "program-exe-flow">Program Execution Flow</h2>
+  <img style = "margin-top:4em" src = "https://www.bitsofbytes.co/uploads/2/5/5/3/25530678/fde_1_orig.png">
+  <div>(image taken from <a href= "https://www.bitsofbytes.co/computer-architecture.html">bitsofbytes.co</a>)</div>
+  <img class = "dividers" src = "https://pluspng.com/img-png/png-divider-lines-tiny-edge-line-decorative-divider-png-512.png" alt ="divider">
+  <h2 class = "sub-headers" id = "test-self">Test Yourself!</h2>
+  <p id="qwe">Click on the questions to reveal the answers!</p>
+  <div id ="Q"><button onclick= "myFunction()" id ="Q1" class = "button"><p id ="demo">
+    What is the role of the ALU?</p>
+  </button>
+  <button onclick= "myFunction2()" id="Q1" class = "button"><p id ="demo2">
+    What are the 4 main registers?</p>
+  </button>
+    <button onclick= "myFunction3()" id="Q1" class = "button"><p id ="demo3">Why was Von Neumann's Architecture a game changer?</p>
+  </button>
+  </div>
+  <img class = "dividers" src = "https://pluspng.com/img-png/png-divider-lines-tiny-edge-line-decorative-divider-png-512.png" alt ="divider">
+  <div id ="r">Hope this helped!</div>
+  
+  
+  <script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "'To perform all the calculations needed by the CPU'";
+}
+function myFunction2(){
+       document.getElementById("demo2").innerHTML = "'The Control Unit, ALU, PC and GPR'";
+}
+    function myFunction3(){
+       document.getElementById("demo3").innerHTML = "'Before his idea, running a program was a huge pain in the neck. His stored program concept, the idea of storing instruction data and program data in the same memory, was much more efficient'";
+}
+</script>
+  </body>
 </html>
 
