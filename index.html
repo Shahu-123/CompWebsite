@@ -21,7 +21,7 @@
         border: groove #123C69 5px;
         padding:15px;
     }
-    #intro{
+    #intro, .CPU-exp{
         background: #123C69;
         line-height:1.3em;
         font-size:1.15em;
@@ -50,7 +50,7 @@
         text-decoration:underline;
     
     }
-    ol li a{
+    ul li a{
         text-decoration:none;
         color: inherit;
     }
@@ -138,11 +138,41 @@
     background:#EDC7B7;
   }
   .button:hover {
-    opacity: 1
+    opacity: 1;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
   #button-s{
     display:flex;
     margin:auto;
+  }
+  .CPU-exp{
+   border:dotted #EEE2DC 3px;
+    width:65%;
+    text-align:center;
+    margin:auto;
+    margin-top:3em;
+    margin-bottom:3em;
+  }
+  #control-unit{
+    background:#AC3B61;
+    margin-top:8em;
+    border:dotted #EDC7B7 3px;
+  }
+  #A-L-U ol{
+    text-align:center;
+    margin: 0 auto;
+    list-style:none;
+  }
+  #A-L-U a{
+    color:white;
+  }
+  #program-counter{
+    background:#BAB2B5;
+    color:rgb(255, 255, 255);
+  }
+  #G-P-R{
+    background:rgb(200, 175, 150);
+    color:white;
   }
 </style>
 <!--colors: #EDC7B7, #EEE2DC, #BAB2B5, #123C69, #AC3B61-->
@@ -151,14 +181,14 @@
   <img class = "dividers" src = "https://pluspng.com/img-png/png-divider-lines-tiny-edge-line-decorative-divider-png-512.png" alt ="divider">
 <div id = "contents">Contents</div>
 
-<div id = "why-neumann"><ol>
-        <li><a href = "#why-von-neumann">Why Von Neumann?</a></li>
+<div id = "why-neumann"><ul style="list-style:none;">
+        <li><a href = "#why-von-neumann">What is The Von Neumann Architecture?</a></li>
         <li><a href = "#how-it-works">How it Works</a></li>
         <li>Test Yourself!</li>
-        </ol>
+        </ul>
 </div>
   <img class = "dividers" src = "https://pluspng.com/img-png/png-divider-lines-tiny-edge-line-decorative-divider-png-512.png" alt ="divider">
-  <h2 class = "sub-headers" id = "why-von-neumann">Why Von Neumann?</h2>
+  <h2 class = "sub-headers" id = "why-von-neumann">What is The Von Neumann Architecture?</h2>
 <div id = "intro">The <strong>Von Neumann architecture</strong> is a computer architecture that was first published by <a  id ="john" href ="https://en.wikipedia.org/wiki/John_von_Neumann" target = "_blank">John Von Neumann</a> in 1945.<br>
 <img id = "von" src = "https://upload.wikimedia.org/wikipedia/commons/5/5e/JohnvonNeumann-LosAlamos.gif"alt ="A picture of Von Neumann" width = "20%"><br>
 
@@ -180,11 +210,41 @@ The Von Neumann architecture is based on the stored-program computer concept, wh
   </ol>
   <h3 class ="sub-sub-headers">Inside the CPU</h3>
   <div id ="button-s">
-  <a class ="button" id ="control">Control Unit</a>
-  <a class ="button" id ="ALU">ALU<br><br>Arithmetic & Logic Unit</a>
-  <a class ="button" id ="PC" >PC<br><br>Program Counter</a>
-  <a href = "#intro" class ="button" id ="GPR" >General Purpose Register</a>
+  <a href = "#control-unit" class ="button" id ="control">Control Unit</a>
+  <a href = "#A-L-U" class ="button" id ="ALU">ALU<br><br>Arithmetic & Logic Unit</a>
+  <a href = "#program-counter" class ="button" id ="PC" >PC<br><br>Program Counter</a>
+  <a href = "#G-P-R" class ="button" id ="GPR" >General Purpose Register</a>
   </div>
+  <div id = "control-unit" class ="CPU-exp">
+    <h4>Control Unit</h4>
+    <p>The Control Unit is in charge of controlling and coordinating the operations of the computer by controlling when and which instructions are to be executed.<br><br>
+    Like a manager at a store that "controls" and "coordinates" the workflow.
+    </p>
+  </div>
+  <div id = "A-L-U" class ="CPU-exp">
+    <h4>ALU</h4>
+    <p>The ALU is responsible for all the mathematics and calculations that need to be performed by the CPU. It can however only calculate:
+    <ol>
+    <li>Addition</li>
+    <li>Subtraction</li>
+    <li>Multiplication</li>
+    <li>Division</li>
+    <li>Logical Comparisons. eg; Is 9 > 5</li>
+    </ol><br>
+    The ALU also includes Boolean operators. Boolean operators are the words "AND", "OR" and "NOT". They are used to make searches more precise. eg; Search for "Cats OR Dogs". This search will provide results for info related to either 'only cats', 'only dogs' or both. <a href ="https://academicanswers.waldenu.edu/faq/72773" target="_blank" >Click Here</a> to learn more about Boolean Operators</p>
+  </div>
+  <div id = "program-counter" class ="CPU-exp">
+    <h4>Program Counter</h4>
+    <p>The Program Counter is used to store the address in memory of the next instruction to be executed.
+      In other words, it contains the memory location address of the instruction to be fetched from the memory.</p>
+  </div>
+  <div id = "G-P-R" class ="CPU-exp">
+    <h4>General Purpose Register</h4>
+    <p>The GPR can be thought of as the notepad of the CPU.  This is used to hold data when performing calculations. 
+      If the ALU needs to temporarily store data as part of its calculations, the GPR is where it is stored.
+    </p>
+  </div>
+
     </body>
 </html>
 
