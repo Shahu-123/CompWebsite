@@ -1,4 +1,4 @@
-# Shahu-123.github.io
+# Shahu.github.io
 Computer Science IGCSE Project Grade 9
 
 Hi, just made my first simple static website with a little bit of javascript to explain 
